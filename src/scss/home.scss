@@ -7,6 +7,13 @@
     min-height: 100%;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
+    padding-top: toRem(80);
+    padding-bottom: toRem(30);
+    column-gap: toRem(20);
+    @media (max-width: $mobile) {
+      grid-template-columns: auto;
+      row-gap: toRem(30);
+    }
   }
   // .main-section__content
   &__content {
@@ -25,38 +32,66 @@
   }
   // .main-section__decor
   &__decor {
-    width: 100%;
-    justify-self: end;
-    max-width: 336px;
   }
 
   // .main-section__image
   &__image {
+  }
+}
+
+.decor-main-section {
+  margin: toRem(0) toRem(22);
+  max-width: 336px;
+  // align-self: center;
+  justify-self: center;
+  @media (min-width: $mobile) {
+    width: 100%;
+    justify-self: end;
+  }
+
+  // .decor-main-section__box
+  &__box {
     position: relative;
     padding-bottom: percent(400, 336);
+    border-radius: toRem(16);
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      border-radius: toRem(16);
+    }
+    &::before {
+      z-index: 1;
+      background-color: rgb(126, 116, 241);
+      transform: rotate(-9.55deg);
+    }
+    &::after {
+      z-index: 2;
+      background: rgb(234, 230, 254) url("@img/main/lines.svg") top right / 58% no-repeat;
+    }
   }
-  img {
+
+  // .decor-main-section__image
+  &__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    border-radius: toRem(16);
+  }
+  // .decor-main-section__picture
+  &__picture {
+    z-index: 3;
     position: absolute;
     bottom: 0;
     left: 0;
+    max-width: 100%;
   }
 }
 //====================================================================================================
-
-.social {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  row-gap: toRem(5);
-  @include adaptiveValue("column-gap", 34, 15);
-  // .social__link
-  &__link {
-    font-size: toRem(22);
-    transition: all 0.3s ease 0s;
-    @media (any-hover: hover) {
-      &:hover {
-        color: $purpleColor;
-      }
-    }
-  }
-}

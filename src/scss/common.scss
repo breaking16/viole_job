@@ -45,5 +45,27 @@
 }
 .text {
   line-height: math.div(32, 16);
+  p {
+    &:not(:last-child) {
+      margin-bottom: toRem(15);
+    }
+  }
 }
 /*======================================================*/
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  row-gap: toRem(5);
+  @include adaptiveValue("column-gap", 34, 15);
+  // .social__link
+  &__link {
+    font-size: toRem(22);
+    transition: all 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $purpleColor;
+      }
+    }
+  }
+}
