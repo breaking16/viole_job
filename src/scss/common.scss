@@ -1,7 +1,13 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.page {
+  // .page__main
+  &__main {
+  }
+}
+/*======================================================*/
 .title {
   // .title__label1
-  &__label1 {
+  &__label {
     text-transform: uppercase;
     font-weight: 500;
     font-size: toRem(12);
@@ -28,5 +34,16 @@
     font-size: toRem(36);
     font-weight: 700;
     line-height: math.div(45, 36);
+    span {
+      color: $purpleColor;
+    }
+    &_big {
+      font-size: 44px;
+      line-height: math.div(55, 44);
+    }
   }
 }
+.text {
+  line-height: math.div(32, 16);
+}
+/*======================================================*/

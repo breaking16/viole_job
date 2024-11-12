@@ -7,8 +7,34 @@
 <body>
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
-		<main class="page">
-
+		<main data-fp class="page">
+			<section data-fp-section class="page__main main-section">
+				<div class="main-section__container">
+					<div class="main-section__content">
+						<div class="main-section__title title">
+							<div class="title__label">MY NAME IS</div>
+							<h1 class="title__value title__value_big">Alex <span>Smith</span>.</h1>
+						</div>
+						<div class="main-section__text text">
+							Creative front-end developer with more than +5 years of experience in
+							enterprise companies and startups. Proficient in
+							JavaScript, Angular, and React. Passionate about UI/UX
+						</div>
+						<div class="main-section__social social">
+							<a class="social__link _icon-s-instagram" href="#"></a>
+							<a class="social__link _icon-s-git" href="#"></a>
+							<a class="social__link _icon-s-twitter" href="#"></a>
+							<a class="social__link _icon-s-linkedin" href="#"></a>
+							<a class="social__link" href="#"></a>
+						</div>
+					</div>
+					<div class="main-section__decor">
+						<div class="main-section__image">
+							<img src="img/main/picture.png" alt="Man">
+						</div>
+					</div>
+				</div>
+			</section>
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
