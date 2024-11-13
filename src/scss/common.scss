@@ -3,6 +3,12 @@
   // .page__main
   &__main {
   }
+  // .page__services
+  &__services {
+  }
+  // .page__portfolio
+  &__portfolio {
+  }
 }
 /*======================================================*/
 .title {
@@ -57,7 +63,7 @@
   flex-wrap: wrap;
   align-items: center;
   row-gap: toRem(5);
-  @include adaptiveValue("column-gap", 34, 15);
+  @include adaptiveValue("column-gap", 34, 25);
   // .social__link
   &__link {
     font-size: toRem(22);
