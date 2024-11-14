@@ -9,6 +9,8 @@
   // .page__portfolio
   &__portfolio {
   }
+  &__carear {
+  }
 }
 /*======================================================*/
 .title {
@@ -37,15 +39,15 @@
   // .title__value
   &__value {
     font-family: "Plus Jakarta Sans";
-    font-size: toRem(36);
     font-weight: 700;
     line-height: math.div(45, 36);
+    @include adaptiveValue("font-size", 36, 28);
     span {
       color: $purpleColor;
     }
     &_big {
-      font-size: 44px;
       line-height: math.div(55, 44);
+      @include adaptiveValue("font-size", 44, 36);
     }
   }
 }
@@ -72,6 +74,25 @@
       &:hover {
         color: $purpleColor;
       }
+    }
+  }
+}
+/*======================================================*/
+.category-link {
+  display: inline-block;
+  border: 1px solid rgb(241, 241, 241);
+  border-radius: toRem(4);
+  color: $greyColor;
+  font-size: toRem(12);
+  line-height: math.div(15, 12);
+  padding: toRem(4) toRem(8);
+  line-height: math.div(15, 12);
+  transition: all 0.3s ease 0s;
+  @media (any-hover: hover) {
+    &:hover {
+      color: rgb(255, 255, 255);
+      background-color: $purpleColor;
+      border: toRem(1) solid $purpleColor;
     }
   }
 }
