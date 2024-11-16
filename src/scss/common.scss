@@ -11,6 +11,15 @@
   }
   &__carear {
   }
+  // .page__blog
+  &__blog {
+  }
+  // .page__testimonials
+  &__testimonials {
+  }
+  // .page__skills
+  &__skills {
+  }
 }
 /*======================================================*/
 .title {
@@ -95,4 +104,13 @@
       border: toRem(1) solid $purpleColor;
     }
   }
+}
+/*======================================================*/
+.date {
+  border-radius: toRem(4);
+  padding: toRem(4) toRem(8) toRem(4) toRem(8);
+  background: rgb(251, 251, 251);
+  color: $greyColor;
+  font-size: toRem(12);
+  line-height: math.div(15, 12);
 }
