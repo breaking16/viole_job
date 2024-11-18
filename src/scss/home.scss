@@ -262,6 +262,7 @@
       object-position: top;
       transition: transform 0.8s ease 0s;
     }
+
     @media (any-hover: hover) {
       &:hover {
         opacity: 1;
@@ -274,6 +275,7 @@
       opacity: 1;
     }
   }
+
   // .item-portfolio__body
   &__body {
     padding: toRem(24);
@@ -789,6 +791,7 @@
 /*======================================================*/
 
 .contacts {
+  flex: 1 1 auto;
   background: rgb(251, 251, 251);
   // .contacts__container
   &__container {
@@ -801,20 +804,37 @@
 
   // .contacts__content
   &__content {
-    display: grid;
+    display: flex;
     align-items: center;
-    grid-template-columns: 1fr 1fr;
+    @media (max-width: toEm(850)) {
+      flex-direction: column-reverse;
+    }
   }
 
   // .contacts__form
   &__form {
+    flex: 0 1 50%;
+    @media (max-width: toEm(850)) {
+      flex: 0 0 auto;
+      width: 100%;
+    }
   }
   // .contacts__body
   &__body {
+    flex: 0 1 50%;
     @include adaptiveValue("padding-left", 105, 20);
+
+    @media (max-width: toEm(850)) {
+      flex: 0 0 auto;
+      width: 100%;
+      padding-left: 0;
+    }
   }
   // .contacts__list
   &__list {
+    @media (max-width: toEm(850)) {
+      margin-bottom: toRem(30);
+    }
   }
 }
 .form {
